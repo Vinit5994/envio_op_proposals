@@ -1,0 +1,84 @@
+type OptimismGovernorV6_Initialized {
+  id: ID!
+  version: BigInt!
+}
+
+type OptimismGovernorV6_ProposalCanceled {
+  id: ID!
+  proposalId: BigInt!
+}
+
+type OptimismGovernorV6_ProposalCreated {
+  id: ID!
+  proposalId: BigInt!
+  proposer: String!
+  targets: [String!]!
+  values: [BigInt!]!
+  signatures: [String!]!
+  calldatas: [String!]!
+  startBlock: BigInt!
+  endBlock: BigInt!
+  description: String!
+  proposalType: BigInt!
+}
+
+type OptimismGovernorV6_ProposalDeadlineUpdated {
+  id: ID!
+  proposalId: BigInt!
+  deadline: BigInt!
+}
+
+type OptimismGovernorV6_ProposalExecuted {
+  id: ID!
+  proposalId: BigInt!
+}
+
+type OptimismGovernorV6_ProposalThresholdSet {
+  id: ID!
+  oldProposalThreshold: BigInt!
+  newProposalThreshold: BigInt!
+}
+
+type OptimismGovernorV6_ProposalTypeUpdated {
+  id: ID!
+  proposalId: BigInt!
+  proposalType: BigInt!
+}
+
+type OptimismGovernorV6_QuorumNumeratorUpdated {
+  id: ID!
+  oldQuorumNumerator: BigInt!
+  newQuorumNumerator: BigInt!
+}
+
+type OptimismGovernorV6_VoteCast {
+  id: ID!
+  voter: String!
+  proposalId: BigInt!
+  support: BigInt!
+  weight: BigInt!
+  reason: String!
+}
+
+type OptimismGovernorV6_VoteCastWithParams {
+  id: ID!
+  voter: String!
+  proposalId: BigInt!
+  support: BigInt!
+  weight: BigInt!
+  reason: String!
+  params: String!
+}
+
+type OptimismGovernorV6_VotingDelaySet {
+  id: ID!
+  oldVotingDelay: BigInt!
+  newVotingDelay: BigInt!
+}
+
+type OptimismGovernorV6_VotingPeriodSet {
+  id: ID!
+  oldVotingPeriod: BigInt!
+  newVotingPeriod: BigInt!
+}
+
